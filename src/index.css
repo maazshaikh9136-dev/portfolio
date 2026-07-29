@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #050816;
+  --bg-secondary: #0B1120;
+  --bg-tertiary: #111827;
+  --accent: #00E5FF;
+  --accent-2: #4F9DFF;
+  --text: #FFFFFF;
+  --text-sub: #94A3B8;
+  --text-muted: #64748B;
+  --glass-bg: rgba(11, 17, 32, 0.6);
+  --glass-border: rgba(0, 229, 255, 0.12);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --glow-accent: 0 0 30px rgba(0, 229, 255, 0.3);
+  --glow-accent-strong: 0 0 60px rgba(0, 229, 255, 0.5);
+  --gradient-primary: linear-gradient(135deg, #00E5FF, #4F9DFF);
+  --gradient-bg: linear-gradient(135deg, #050816 0%, #0B1120 50%, #111827 100%);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html {
+  scroll-behavior: auto;
+  background-color: var(--bg-primary);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-primary);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(0, 229, 255, 0.3);
+  color: var(--text);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 229, 255, 0.5);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-padding {
+  padding: 120px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 80px 0;
+  }
+  .section-container {
+    padding: 0 16px;
+  }
+}

@@ -1,0 +1,98 @@
+.contact-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.contact-intro {
+  font-size: 17px;
+  color: var(--text-sub);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.contact-socials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-social-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 44px 28px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+  text-align: center;
+}
+
+.contact-social-card:hover {
+  border-color: rgba(0, 229, 255, 0.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.contact-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(0, 229, 255, 0.08);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  color: var(--accent);
+  transition: all 0.35s;
+}
+
+.contact-social-card:hover .contact-social-icon {
+  background: rgba(0, 229, 255, 0.15);
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.2);
+  transform: scale(1.08);
+}
+
+.contact-social-label {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.contact-social-username {
+  font-size: 13px;
+  color: var(--text-sub);
+  word-break: break-all;
+}
+
+.contact-social-glow {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.35s;
+  background: radial-gradient(circle at 50% 0%, var(--accent) 0%, transparent 60%);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.contact-social-card:hover .contact-social-glow {
+  opacity: 0.06;
+}
+
+@media (max-width: 640px) {
+  .contact-socials-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+  }
+  .contact-social-card {
+    padding: 32px 24px;
+  }
+}
