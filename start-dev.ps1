@@ -1,0 +1,1 @@
+& 'C:\Program Files\nodejs\node.exe' 'C:\Users\maazs\imp\portfolio-main\portfolio-main\node_modules\.vite\bin\vite.js' dev
